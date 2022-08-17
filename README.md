@@ -9,16 +9,20 @@ The clientside.js file contains a couple functions that will allow you to intera
 # Useage examples (client side)
 Note: All the info including tokens, channel IDs, and keys is forged.
 
+```
+//Send data
 InteractionsAPI.post({"type":2,"application_id":"512079641981353995","guild_id":"1009406265736036352","channel_id":"1009406269640933376","session_id":"go2f97f32igqfwfqk13rd2yuk","data":{"version":"1000100476039209103","id":"1000100475598815271","name":"collect","type":1,"options":[],"application_command":{"id":"1000100475598815271","application_id":"512079641981353995","version":"1000100476039209103","default_permission":true,"default_member_permissions":null,"type":1,"name":"collect","description":"Collect your income","dm_permission":true},"attachments":[]},"nonce":"1009406272757301248"})
-
 //Returns "m_c$9HSrpo"
+```
 
+```
+//Send a request
 InteractionsAPI.request("MTAwOTQwMzQ3NTQ4Nzg4MzI2NA.GP26Wa.H_qSHbKFHjA07mRqBVQZXkQB1st-Z7muGIcbrs", "1009403475487883264", "m_c$9HSrpo")
-
 //Returns "Request sent"
+```
 
 # How to get interaction data
 This API would be useless without the Discord interaction data it needs to automate. To get this info, you will first need to use ctrl+shift+i to get into inspect element. You can either do this from the site or from the desktop application itself, it doesn't matter since Discord was built using Electron. After you've opened inspect element, navigate to the Network tab and type "API" into the filter field. Afterwards, run your chosen slash command. After running the command, a new object should appear on the list under the name "interactions". Click on this object and it will open up a list of headers. Navigate over to the payload section and copy the compressed JSON data, this is the interaction data to send through the API.
 
-#Conclusion
+# Conclusion
 I was bored.
