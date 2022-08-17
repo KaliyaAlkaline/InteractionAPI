@@ -9,14 +9,14 @@ The clientside.js file contains a couple functions that will allow you to intera
 # Useage examples (client side)
 Note: All the info including tokens, channel IDs, and keys is forged.
 
+Send data:
 ```
-//Send data
 InteractionsAPI.post({"type":2,"application_id":"512079641981353995","guild_id":"1009406265736036352","channel_id":"1009406269640933376","session_id":"go2f97f32igqfwfqk13rd2yuk","data":{"version":"1000100476039209103","id":"1000100475598815271","name":"collect","type":1,"options":[],"application_command":{"id":"1000100475598815271","application_id":"512079641981353995","version":"1000100476039209103","default_permission":true,"default_member_permissions":null,"type":1,"name":"collect","description":"Collect your income","dm_permission":true},"attachments":[]},"nonce":"1009406272757301248"})
 //Returns "m_c$9HSrpo"
 ```
 
+Send a request:
 ```
-//Send a request
 InteractionsAPI.request("MTAwOTQwMzQ3NTQ4Nzg4MzI2NA.GP26Wa.H_qSHbKFHjA07mRqBVQZXkQB1st-Z7muGIcbrs", "1009403475487883264", "m_c$9HSrpo")
 //Returns "Request sent"
 ```
