@@ -1,0 +1,9 @@
+Download these:
+npm i body-parser
+npm i cors
+npm i express
+npm i xmlhttprequest
+npm i nodemon
+
+Start the server:
+npm start

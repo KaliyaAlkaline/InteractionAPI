@@ -1,0 +1,10 @@
+const express = require("express")
+const bodyParser = require("body-parser")
+const app = express()
+const cors = require("cors")
+app.use(cors())
+const fs = require("fs")
+const routes = require("./routes/routes.js") (app, fs)
+const server = app.listen(3001, () => {
+	console.log("Listening on port %s...", server.address().port)
+})
