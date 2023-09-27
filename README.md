@@ -1,4 +1,4 @@
-# InteractionsAPI
+# InteractionAPI
 With the new enforcement of interaction commands in Discord, I have created a small REST API designed to automate interaction commands. Note that I am not responsible for how anyone uses this code, selfbotting on Discord is strictly prohibited and will get your account banned if someone reports it. You have been warned.
 
 # Setup Info
