@@ -1,4 +1,4 @@
-function InteractionsAPI(url, type, json, GETcontent=null) {
+function InteractionAPI(url, type, json, GETcontent=null) {
     var xhr = new XMLHttpRequest()
     xhr.onreadystatechange = function () { 
         if (xhr.readyState == 4) {
@@ -16,9 +16,9 @@ function InteractionsAPI(url, type, json, GETcontent=null) {
     xhr.send()
     return GETcontent
 }
-InteractionsAPI.post = function (data) {
-    return InteractionsAPI("http://localhost:3001/interactions", "POST", {data: data})
+InteractionAPI.post = function (data) {
+    return InteractionAPI("http://localhost:3001/interactions", "POST", {data: data})
 }
-InteractionsAPI.request = function (authorization, channelid, key) {
-    return InteractionsAPI("http://localhost:3001/interactions/request", "POST", {authorization: authorization, channelid: channelid, key: key})
+InteractionAPI.request = function (authorization, channelid, key) {
+    return InteractionAPI("http://localhost:3001/interaction/request", "POST", {authorization: authorization, channelid: channelid, key: key})
 }
