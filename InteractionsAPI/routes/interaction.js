@@ -20,8 +20,8 @@ function makeid(length) {
 	}
 	return result
 }
-const interactions = (app, fs) => {
-	const dataPath = "./data/interactions.json"
+const interaction = (app, fs) => {
+	const dataPath = "./data/interaction.json"
 	const readFile = (
 		callback,
 		returnJson = false,
@@ -48,7 +48,7 @@ const interactions = (app, fs) => {
 			callback()
 		})
 	}
-	app.post("/interactions", (req, res) => {
+	app.post("/interaction", (req, res) => {
 		if (req.headers.data !== undefined) {
 			readFile(data => {
 				try {
@@ -82,7 +82,7 @@ const interactions = (app, fs) => {
 			res.status(401).send({"requires":["data"]})
 		}
 	})
-	app.post("/interactions/request", (req, res) => {
+	app.post("/interaction/request", (req, res) => {
 		if (req.headers.authorization !== undefined && req.headers.channelid !== undefined, req.headers.key !== undefined) {
 			readFile(data => {
 				try {
@@ -103,7 +103,7 @@ const interactions = (app, fs) => {
 				}
 				json["session_id"] = "1"
 				json["nonce"] = ((BigInt(Date.now()) - 1420070400000n) << 22n).toString()
-				discordAPI(auth, "/interactions", json, "POST")
+				discordAPI(auth, "/interaction", json, "POST")
 				res.status(200).send("Request sent")
 			}, true)
 		} else {
@@ -111,4 +111,4 @@ const interactions = (app, fs) => {
 		}
 	})
 }
-module.exports = interactions
+module.exports = interaction
